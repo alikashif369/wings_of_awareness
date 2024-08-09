@@ -1,15 +1,4 @@
-/**
-* Template Name: AgriCulture
-* Template URL: https://bootstrapmade.com/agriculture-bootstrap-website-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -2421,5 +2410,120 @@ section,
   opacity: 0;
 }
 
+
+
+/* -----------------------------------------------------------------
+#project page projects section
+--------------------------------------------------------------------*/
+
+.accordion-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+.accordion-button:not(.collapsed) {
+  color: #28a745;
+  background-color: #e9ecef;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.card-body {
+  background-color: #f0f8f5;
+}
+.project-summary {
+  font-weight: bold;
+}
+.container {
+  padding: 20px;
+}
+
+
+
+
+/* -----------------------------------------------------------------
+#conservation efferts page
+--------------------------------------------------------------------*/
+
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  color: #006400; /* Green color for the title */
+  font-weight: bold;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #555;
+}
+
+.projects-section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.projects-section h3 {
+  color: #006400;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.projects-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.projects-section .btn {
+  background-color: #006400;
+  color: #fff;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.projects-section .btn:hover {
+  background-color: #004c2f;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.project-card {
+  margin-bottom: 30px;
+}
+
+.project-card .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-preview {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.book-preview img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
 
 
