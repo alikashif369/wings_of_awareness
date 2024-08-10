@@ -1,0 +1,250 @@
+[
+    {
+        "species": "Northern Cardinal",
+        "fact": "The Northern Cardinal is known for its bright red color and distinctive crest."
+    },
+    {
+        "species": "Blue Jay",
+        "fact": "Blue Jays can mimic the calls of hawks, often to scare other birds away."
+    },
+    {
+        "species": "American Robin",
+        "fact": "American Robins are known for their beautiful songs and are a sign of spring in many areas."
+    },
+    {
+        "species": "Bald Eagle",
+        "fact": "The Bald Eagle has a wingspan of up to 7 feet and is the national bird of the United States."
+    },
+    {
+        "species": "Barn Owl",
+        "fact": "Barn Owls have heart-shaped faces and can hunt in complete darkness."
+    },
+    {
+        "species": "Common Loon",
+        "fact": "Common Loons are excellent divers and can stay underwater for several minutes."
+    },
+    {
+        "species": "Peregrine Falcon",
+        "fact": "Peregrine Falcons are the fastest birds, reaching speeds of over 200 mph during dives."
+    },
+    {
+        "species": "Scarlet Macaw",
+        "fact": "Scarlet Macaws are known for their bright red, yellow, and blue plumage."
+    },
+    {
+        "species": "Mute Swan",
+        "fact": "Mute Swans are known for their graceful appearance and are often featured in literature and art."
+    },
+    {
+        "species": "African Grey Parrot",
+        "fact": "African Grey Parrots are highly intelligent and can mimic human speech."
+    },
+    {
+        "species": "Golden Eagle",
+        "fact": "Golden Eagles have powerful talons and are known for their hunting prowess."
+    },
+    {
+        "species": "Great Horned Owl",
+        "fact": "Great Horned Owls are known for their large size and tufted ears."
+    },
+    {
+        "species": "Kingfisher",
+        "fact": "Kingfishers have excellent vision and can see into the water to spot prey."
+    },
+    {
+        "species": "Red-tailed Hawk",
+        "fact": "Red-tailed Hawks are commonly seen perched along highways and are known for their distinctive red tail."
+    },
+    {
+        "species": "European Starling",
+        "fact": "European Starlings are known for their impressive murmurations, where thousands of birds fly in coordinated patterns."
+    },
+    {
+        "species": "Hummingbird",
+        "fact": "Hummingbirds can hover in mid-air by rapidly flapping their wings, up to 80 times per second."
+    },
+    {
+        "species": "Snowy Owl",
+        "fact": "Snowy Owls have excellent camouflage in snowy environments and are known for their white plumage."
+    },
+    {
+        "species": "Penguin",
+        "fact": "Penguins are flightless birds that are excellent swimmers and live primarily in the Southern Hemisphere."
+    },
+    {
+        "species": "Peacock",
+        "fact": "Peacocks are known for their extravagant tail feathers, which they fan out in a display to attract mates."
+    },
+    {
+        "species": "Flamingo",
+        "fact": "Flamingos get their pink color from the carotenoid pigments in their diet of algae and crustaceans."
+    },
+    {
+        "species": "Woodpecker",
+        "fact": "Woodpeckers have specialized skulls and strong neck muscles to withstand the impact of pecking."
+    },
+    {
+        "species": "Albatross",
+        "fact": "Albatrosses have the largest wingspan of any bird, reaching up to 12 feet."
+    },
+    {
+        "species": "Ostrich",
+        "fact": "Ostriches are the largest and heaviest birds, and they can run at speeds of up to 45 mph."
+    },
+    {
+        "species": "Kiwi",
+        "fact": "Kiwis are flightless birds native to New Zealand, known for their long beaks and nocturnal habits."
+    },
+    {
+        "species": "Toucan",
+        "fact": "Toucans have large, colorful bills that they use to reach fruit on branches."
+    },
+    {
+        "species": "Cockatoo",
+        "fact": "Cockatoos are known for their expressive crests and their ability to mimic sounds."
+    },
+    {
+        "species": "Parakeet",
+        "fact": "Parakeets, also known as budgerigars, are small, colorful parrots that are popular as pets."
+    },
+    {
+        "species": "Condor",
+        "fact": "Condors are some of the largest flying birds and are known for their impressive soaring abilities."
+    },
+    {
+        "species": "Puffin",
+        "fact": "Puffins are seabirds known for their colorful beaks and their ability to dive for fish."
+    },
+    {
+        "species": "Raven",
+        "fact": "Ravens are highly intelligent birds known for their problem-solving abilities and complex vocalizations."
+    },
+    {
+        "species": "Magpie",
+        "fact": "Magpies are known for their striking black and white plumage and their tendency to collect shiny objects."
+    },
+    {
+        "species": "Crane",
+        "fact": "Cranes are known for their elaborate courtship dances and their long migrations."
+    },
+    {
+        "species": "Swallow",
+        "fact": "Swallows are agile fliers and are known for their long-distance migrations."
+    },
+    {
+        "species": "Swan",
+        "fact": "Swans are known for their grace and beauty, and they form strong pair bonds that often last for life."
+    },
+    {
+        "species": "Heron",
+        "fact": "Herons are wading birds known for their long legs and necks, which they use to catch fish."
+    },
+    {
+        "species": "Stork",
+        "fact": "Storks are large wading birds known for their long legs and necks, and they are often associated with delivering babies in folklore."
+    },
+    {
+        "species": "Pelican",
+        "fact": "Pelicans have large bills with a pouch that they use to catch and drain water from their prey."
+    },
+    {
+        "species": "Seagull",
+        "fact": "Seagulls are adaptable birds that can be found in many habitats, including coastal areas and inland."
+    },
+    {
+        "species": "Pigeon",
+        "fact": "Pigeons have been used for centuries as messenger birds due to their homing abilities."
+    },
+    {
+        "species": "Dove",
+        "fact": "Doves are symbols of peace and are known for their gentle cooing calls."
+    },
+    {
+        "species": "Finch",
+        "fact": "Finches are small, colorful birds known for their beautiful songs."
+    },
+    {
+        "species": "Sparrow",
+        "fact": "Sparrows are small, brown birds that are common in urban and rural areas."
+    },
+    {
+        "species": "Blackbird",
+        "fact": "Blackbirds are known for their melodic songs and their glossy black plumage."
+    },
+    {
+        "species": "Robin",
+        "fact": "Robins are known for their red breasts and are a common sight in gardens."
+    },
+    {
+        "species": "Wren",
+        "fact": "Wrens are small, energetic birds known for their loud and complex songs."
+    },
+    {
+        "species": "Nightingale",
+        "fact": "Nightingales are famous for their powerful and beautiful singing, especially at night."
+    },
+    {
+        "species": "Warbler",
+        "fact": "Warblers are small, often brightly colored birds known for their complex songs."
+    },
+    {
+        "species": "Canary",
+        "fact": "Canaries are known for their beautiful singing and are popular as pet birds."
+    },
+    {
+        "species": "Hawk",
+        "fact": "Hawks are birds of prey known for their sharp talons and keen eyesight."
+    },
+    {
+        "species": "Eagle",
+        "fact": "Eagles are large birds of prey known for their powerful build and impressive hunting skills."
+    },
+    {
+        "species": "Falcon",
+        "fact": "Falcons are fast-flying birds of prey known for their speed and agility in the air."
+    },
+    {
+        "species": "Owl",
+        "fact": "Owls are nocturnal birds of prey known for their silent flight and excellent night vision."
+    },
+    {
+        "species": "Vulture",
+        "fact": "Vultures are scavengers that play an important role in the ecosystem by cleaning up carrion."
+    },
+    {
+        "species": "Kite",
+        "fact": "Kites are birds of prey known for their graceful flight and ability to hover in the air."
+    },
+    {
+        "species": "Harrier",
+        "fact": "Harriers are birds of prey that hunt by flying low over fields and marshes."
+    },
+    {
+        "species": "Buzzard",
+        "fact": "Buzzards are medium-sized birds of prey known for their soaring flight."
+    },
+    {
+        "species": "Turkey",
+        "fact": "Turkeys are large birds that are native to North America and are known for their distinctive gobble."
+    },
+    {
+        "species": "Quail",
+        "fact": "Quails are small, ground-dwelling birds known for their distinctive calls."
+    },
+    {
+        "species": "Pheasant",
+        "fact": "Pheasants are known for their colorful plumage and are popular game birds."
+    },
+    {
+        "species": "Grouse",
+        "fact": "Grouse are ground-dwelling birds known for their elaborate mating displays."
+    },
+    {
+        "species": "Partridge",
+        "fact": "Partridges are ground-dwelling birds known for their distinctive calls and are often associated with the game bird category."
+    },
+    {
+        "species": "Cockatiel",
+        "fact": "Cockatiels are small parrots known for their friendly nature and the distinctive crest on their heads"
+    }
+]

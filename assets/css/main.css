@@ -2526,4 +2526,144 @@ section,
   margin-bottom: 20px;
 }
 
+/* 
+  ###############  BIRDS MIGRATION SECTION
+*/
+
+
+.hero-section {
+  background: url('./hero_3.jpg') center center/cover no-repeat;
+  height: 60vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section-titlee {
+  text-align: center;
+  margin-top: 40px;
+}
+.section-titlee h2 {
+  color: #006400;
+  font-weight: bold;
+}
+.content-section img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.content-section {
+  margin-bottom: 0;
+}
+.content-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.cta {
+  background-color: #e0ffe0;
+  padding: 40px;
+  text-align: center;
+}
+.cta h2 {
+  color: #006400;
+}
+.cta a {
+  background-color: #006400;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.cta a:hover {
+  background-color: #004c2f;
+}
+
+
+.content-section h3 {
+  color: #006400;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+/* 
+          birds facts
+
+*/
+
+
+
+.random-facts {
+    background: #ffffff; /* Clean white background */
+    color: #2e7d32; /* Dark green text */
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1); /* 3D shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.random-facts:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 -8px 16px rgba(0, 0, 0, 0.15); /* Enhanced 3D shadow on hover */
+}
+
+.random-facts h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #388e3c; /* Medium green color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.random-facts p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4caf50; /* Standard green color */
+}
+
+.random-facts #bird-species {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1b5e20; /* Darker green color */
+    margin-bottom: 20px;
+}
+
+.random-facts #bird-fact {
+    font-size: 18px;
+    font-weight: 300;
+    color: #2e7d32; /* Dark green text */
+}
+
+.random-facts button {
+    background: linear-gradient(145deg, #388e3c, #2c6c41); /* Gradient background */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow for 3D effect */
+}
+
+.random-facts button:hover {
+    background: linear-gradient(145deg, #2c6c41, #1b5e20); /* Darker gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
 

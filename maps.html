@@ -23,17 +23,117 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: AgriCulture
-  * Template URL: https://bootstrapmade.com/agriculture-bootstrap-website-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+  <style>
+    #map {
+        width: 100%;
+        height: 100vh;
+    }
+    .panel {
+        position: relative;
+        height: 100%;
+        background-color: white;
+        padding: 10px;
+        overflow-y: auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        user-select: none;
+    }
+    .panel h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .panel ul {
+        padding-left: 0;
+        list-style: none;
+    }
+    .panel ul li {
+        cursor: pointer;
+        margin-bottom: 8px;
+        padding: 5px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .panel ul li:hover {
+        background-color: #ddd;
+    }
+
+    /* Media query for small screens */
+    @media (max-width: 767px) {
+        .panel {
+            display: none;
+        }
+        #dropdownMenu {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    @media (min-width: 768px) {
+        #dropdownMenu {
+            display: none;
+        }
+    }
+
+    
+    #map-section {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            margin-bottom: 40px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .overlay h2 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+        }
+        .heading {
+          text-align: center;
+        }
+</style>
+
 </head>
 
 <body class="contact-page">
@@ -44,7 +144,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.png" alt="AgriCulture">
-        <!-- <h1 class="sitename">AgriCulture</h1>  -->
+        <!-- <h1 class="sitename">wings of awareness</h1>  -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -54,23 +154,7 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="conservation-efforts.html">Conservation Efforts</a></li>
           <li><a href="bird-migration.html">Bird Migration</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+
           <li><a href="Maps.html" class="active">Maps</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -82,131 +166,143 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/2913130.jpg);">
       <div class="container position-relative">
-        <h1>Contact</h1>
+        <h1>Maps</h1>
         <p>
-          Home
-          /
-          Contact
+          Exploring vital sanctuaries and conservation efforts for our avian friends.
         </p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
+            <li class="current">Maps</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
 
-      <div class="mb-5">
-        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
-      </div>
-      <!-- End Google Maps -->
-
-      <div class="container" data-aos="fade">
-
-        <div class="row gy-5 gx-lg-5">
-
-          <div class="col-lg-4">
-
-            <div class="info">
-              <h3>Get in touch</h3>
-              <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
-
-              <div class="info-item d-flex">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0"></i>
-                <div>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
+       <!-- Map Section -->
+       <section id="map-section">
+        <div class="heading">
+                <h2>Protected Sites in Pakistan</h2>
+                <p>Discover the key protected areas that are crucial for bird conservation.</p>
             </div>
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
-
+        <div class="video-container">
+            <video id="map-video" autoplay loop muted>
+                <source src="./assets/video/Kk_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
         </div>
+    </section>
 
-      </div>
+    <div class="container-fluid">
+      <div class="row no-gutters">
+          <div class="col-md-3 col-lg-2">
+              <div class="panel">
+                  <h2>Ramsar Sites in Pakistan</h2>
+                  <ul id="siteList">
+                      <li data-lat="27.83" data-lng="69.33">
+                          Indus Dolphin Reserve
+                      </li>
+                      <li data-lat="25.08" data-lng="61.80">
+                          Jiwani Coastal Wetland
+                      </li>
+                      <li data-lat="24.92" data-lng="68.05">
+                          Kinjhar (Kalri) Lake
+                      </li>
+                      <li data-lat="25.43" data-lng="66.23">Miani Hor</li>
+                      <li data-lat="24.43" data-lng="67.50">
+                          Nurri Lagoon
+                      </li>
+                      <li data-lat="33.55" data-lng="71.53">Tanda Dam</li>
+                      <li data-lat="32.52" data-lng="70.67">
+                          Thanedar Wala
+                      </li>
+                      <li data-lat="32.48" data-lng="72.00">
+                          Uchhali Complex
+                      </li>
+                      <li data-lat="26.97" data-lng="68.30">
+                          Deh Akro-II Desert Wetland Complex
+                      </li>
+                      <li data-lat="24.78" data-lng="67.78">
+                          Haleji Lake
+                      </li>
+                      <li data-lat="25.25" data-lng="67.10">Hub Dam</li>
+                      <li data-lat="24.17" data-lng="67.50">
+                          Indus River Delta
+                      </li>
+                      <li data-lat="24.25" data-lng="70.00">
+                          Rann of Kutch
+                      </li>
+                      <li data-lat="32.67" data-lng="73.50">
+                          Rasool Barrage
+                      </li>
+                      <li data-lat="32.37" data-lng="70.67">
+                          Thanedar Wala Game Reserve
+                      </li>
+                  </ul>
+              </div>
 
-    </section><!-- /Contact Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section light-background">
-
-      <div class="content">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <h3>Subscribe To Our Newsletter</h3>
-              <p class="opacity-50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt, reprehenderit!
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <form action="forms/newsletter.php" class="form-subscribe php-email-form">
-                <div class="form-group d-flex align-items-stretch">
-                  <input type="email" name="email" class="form-control h-100" placeholder="Enter your e-mail">
-                  <input type="submit" class="btn btn-secondary px-4" value="Subcribe">
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
-                  Your subscription request has been sent. Thank you!
-                </div>
-              </form>
-            </div>
+              <select id="dropdownMenu" class="form-control">
+                  <option value="" selected disabled>
+                      Select a Ramsar Site
+                  </option>
+                  <option data-lat="27.83" data-lng="69.33">
+                      Indus Dolphin Reserve
+                  </option>
+                  <option data-lat="25.08" data-lng="61.80">
+                      Jiwani Coastal Wetland
+                  </option>
+                  <option data-lat="24.92" data-lng="68.05">
+                      Kinjhar (Kalri) Lake
+                  </option>
+                  <option data-lat="25.43" data-lng="66.23">
+                      Miani Hor
+                  </option>
+                  <option data-lat="24.43" data-lng="67.50">
+                      Nurri Lagoon
+                  </option>
+                  <option data-lat="33.55" data-lng="71.53">
+                      Tanda Dam
+                  </option>
+                  <option data-lat="32.52" data-lng="70.67">
+                      Thanedar Wala
+                  </option>
+                  <option data-lat="32.48" data-lng="72.00">
+                      Uchhali Complex
+                  </option>
+                  <option data-lat="26.97" data-lng="68.30">
+                      Deh Akro-II Desert Wetland Complex
+                  </option>
+                  <option data-lat="24.78" data-lng="67.78">
+                      Haleji Lake
+                  </option>
+                  <option data-lat="25.25" data-lng="67.10">
+                      Hub Dam
+                  </option>
+                  <option data-lat="24.17" data-lng="67.50">
+                      Indus River Delta
+                  </option>
+                  <option data-lat="24.25" data-lng="70.00">
+                      Rann of Kutch
+                  </option>
+                  <option data-lat="32.67" data-lng="73.50">
+                      Rasool Barrage
+                  </option>
+                  <option data-lat="32.37" data-lng="70.67">
+                      Thanedar Wala Game Reserve
+                  </option>
+              </select>
           </div>
-        </div>
+          <div class="col-md-9 col-lg-10">
+              <div id="map"></div>
+          </div>
       </div>
-    </section><!-- /Call To Action Section -->
+  </div>
 
+ 
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -305,7 +401,91 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
+ <!-- Leaflet JS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+ <!-- Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script>
+     // Initialize the map
+     var map = L.map("map").setView([30.3753, 69.3451], 5);
+
+     // Add CartoDB tiles
+     L.tileLayer(
+         "https://{s}.basemaps.cartocdn.com/{style}/{z}/{x}/{y}{r}.png",
+         {
+             attribution:
+                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+             subdomains: "abcd",
+             maxZoom: 19,
+             style: "dark_all", // You can change this to dark_all, voyager, etc.
+         }
+     ).addTo(map);
+
+     // Function to add markers for each Ramsar site
+     function addMarker(lat, lng, name) {
+         var marker = L.marker([lat, lng]).addTo(map);
+         marker.bindPopup(name);
+     }
+
+     // Add markers for each Ramsar site
+     var sites = document.querySelectorAll("#siteList li");
+     sites.forEach(function (site) {
+         var lat = site.getAttribute("data-lat");
+         var lng = site.getAttribute("data-lng");
+         var name = site.textContent;
+         addMarker(lat, lng, name);
+
+         // Zoom to the marker when clicking on the site name
+         site.addEventListener("click", function () {
+             map.setView([lat, lng], 10);
+         });
+     });
+
+     // Handle dropdown menu change
+     var dropdown = document.getElementById("dropdownMenu");
+     dropdown.addEventListener("change", function () {
+         var selectedOption = this.options[this.selectedIndex];
+         var lat = selectedOption.getAttribute("data-lat");
+         var lng = selectedOption.getAttribute("data-lng");
+         if (lat && lng) {
+             map.setView([lat, lng], 10);
+             this.selectedIndex = 0; // Reset dropdown after selection
+         }
+     });
+
+     // Function to add polygons for protected areas
+     function addPolygon(coords, name) {
+         var polygon = L.polygon(coords, {
+             color: "green",
+             fillColor: "#b2d8b2",
+             fillOpacity: 0.5,
+         }).addTo(map);
+         polygon.bindPopup(name);
+     }
+
+     // Add polygons for specific areas
+     var indusDolphinReserveCoords = [
+         [27.7, 69.1],
+         [27.9, 69.1],
+         [27.9, 69.5],
+         [27.7, 69.5],
+     ];
+
+     var kinjharLakeCoords = [
+         [24.85, 68.0],
+         [25.0, 68.0],
+         [25.0, 68.1],
+         [24.85, 68.1],
+     ];
+
+     addPolygon(indusDolphinReserveCoords, "Indus Dolphin Reserve");
+     addPolygon(kinjharLakeCoords, "Kinjhar Lake");
+ </script>
+
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
