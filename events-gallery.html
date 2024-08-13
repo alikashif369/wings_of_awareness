@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Wings of Awareness</title>
+        <meta content="" name="description" />
+        <meta content="" name="keywords" />
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon" />
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Marcellus:wght@400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Vendor CSS Files -->
+        <link
+            href="assets/vendor/bootstrap/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+        <link
+            href="assets/vendor/swiper/swiper-bundle.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="assets/vendor/glightbox/css/glightbox.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet" />
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f7f7f7;
+            }
+
+            header {
+                text-align: center;
+                padding: 1em;
+                background-color: #4caf50;
+                color: white;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .gallery {
+                padding: 10px;
+                column-count: 3;
+                column-gap: 15px;
+            }
+
+            .gallery-item {
+                position: relative;
+                break-inside: avoid;
+                margin-bottom: 15px;
+                overflow: hidden;
+                cursor: pointer;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s ease;
+                background-color: white;
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.05);
+            }
+
+            .gallery-item img,
+            .gallery-item video {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .video-overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3em;
+                color: rgba(255, 255, 255, 0.8);
+                pointer-events: none;
+                display: none;
+            }
+
+            .gallery-item video + .video-overlay {
+                display: block;
+            }
+
+            .lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .lightbox-content {
+                max-width: 90%;
+                max-height: 80%;
+                text-align: center;
+                position: relative;
+            }
+
+            .lightbox img,
+            .lightbox video {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 2em;
+                color: white;
+                cursor: pointer;
+            }
+
+            @media (max-width: 768px) {
+                .gallery {
+                    column-count: 2;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .gallery {
+                    column-count: 1;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="contact-page">
+        <header
+            id="header"
+            class="header d-flex align-items-center position-relative"
+        >
+            <div
+                class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+            >
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <!-- Uncomment the line below if you also wish to use an image logo -->
+                    <img src="assets/img/logo.png" alt="AgriCulture" />
+                    <!-- <h1 class="sitename">wings of awareness</h1>  -->
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li>
+                            <a href="conservation-efforts.html"
+                                >Conservation Efforts</a
+                            >
+                        </li>
+                        <li>
+                            <a href="bird-migration.html">Bird Migration</a>
+                        </li>
+
+                        <li><a href="Maps.html" class="active">Maps</a></li>
+                        <li>
+                            <a href="events-gallery.html">Events Gallery</a>
+                        </li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- Page Title -->
+            <div
+                class="page-title dark-background"
+                data-aos="fade"
+                style="background-image: url(assets/img/event_bg.jpg)"
+            >
+                <div class="container position-relative">
+                    <h1>Events Gallery</h1>
+                    <p>
+                        Discover highlights and memories from our various
+                        events.
+                    </p>
+                    <nav class="breadcrumbs">
+                        <ol>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="current">Events Gallery</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Page Title -->
+
+            <div class="container gallery">
+                <!-- Images -->
+
+                <!-- More images... -->
+
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.42.58 PM.jpeg"
+                        alt="Photo 1"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.45 PM (1).jpeg"
+                        alt="Photo 2"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.45 PM (2).jpeg"
+                        alt="Photo 3"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.46 PM.jpeg"
+                        alt="Photo 4"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.47 PM.jpeg"
+                        alt="Photo 5"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.48 PM.jpeg"
+                        alt="Photo 6"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.49 PM.jpeg"
+                        alt="Photo 7"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.50 PM (2).jpeg"
+                        alt="Photo 8"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.50 PM.jpeg"
+                        alt="Photo 9"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.51 PM.jpeg"
+                        alt="Photo 10"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.52 PM (1).jpeg"
+                        alt="Photo 11"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 1.52.53 PM (1).jpeg"
+                        alt="Photo 12"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.03 PM (1).jpeg"
+                        alt="Photo 13"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.03 PM.jpeg"
+                        alt="Photo 14"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.04 PM (1).jpeg"
+                        alt="Photo 15"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.04 PM.jpeg"
+                        alt="Photo 16"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.05 PM (1).jpeg"
+                        alt="Photo 17"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.05 PM.jpeg"
+                        alt="Photo 18"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.16 PM.jpeg"
+                        alt="Photo 19"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.18 PM.jpeg"
+                        alt="Photo 20"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.20 PM.jpeg"
+                        alt="Photo 21"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.21 PM (1).jpeg"
+                        alt="Photo 22"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.04.21 PM.jpeg"
+                        alt="Photo 23"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.11.45 PM (1).jpeg"
+                        alt="Photo 24"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-08 at 2.11.45 PM.jpeg"
+                        alt="Photo 25"
+                    />
+                </div>
+
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.33 PM.jpeg"
+                        alt="Photo 1"
+                    />
+                </div>
+                
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.37 PM.jpeg"
+                        alt="Photo 3"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.38 PM.jpeg"
+                        alt="Photo 4"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.41 PM.jpeg"
+                        alt="Photo 5"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.42 PM.jpeg"
+                        alt="Photo 6"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.44 PM.jpeg"
+                        alt="Photo 7"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.47 PM.jpeg"
+                        alt="Photo 8"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.48 PM (1).jpeg"
+                        alt="Photo 9"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.48 PM.jpeg"
+                        alt="Photo 10"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.57 PM.jpeg"
+                        alt="Photo 11"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.58 PM (1).jpeg"
+                        alt="Photo 12"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.58 PM (2).jpeg"
+                        alt="Photo 13"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 1.06.58 PM.jpeg"
+                        alt="Photo 14"
+                    />
+                </div>
+                
+                
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.38 PM.jpeg"
+                        alt="Photo 17"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.40 PM.jpeg"
+                        alt="Photo 18"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.53 PM.jpeg"
+                        alt="Photo 19"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.54 PM.jpeg"
+                        alt="Photo 20"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.57 PM.jpeg"
+                        alt="Photo 21"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.58 PM (1).jpeg"
+                        alt="Photo 22"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.26.58 PM.jpeg"
+                        alt="Photo 23"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.01 PM (1).jpeg"
+                        alt="Photo 24"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.01 PM.jpeg"
+                        alt="Photo 25"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.28 PM (1).jpeg"
+                        alt="Photo 26"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.28 PM.jpeg"
+                        alt="Photo 27"
+                    />
+                </div>
+
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.29 PM (1).jpeg"
+                        alt="Photo 1"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.29 PM.jpeg"
+                        alt="Photo 2"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.30 PM (1).jpeg"
+                        alt="Photo 3"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.30 PM (2).jpeg"
+                        alt="Photo 4"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.30 PM.jpeg"
+                        alt="Photo 5"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.31 PM (1).jpeg"
+                        alt="Photo 6"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.27.31 PM.jpeg"
+                        alt="Photo 7"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.29.44 PM.jpeg"
+                        alt="Photo 8"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                    <img
+                        src="./assets/img/gallery/WhatsApp Image 2024-08-12 at 12.29.45 PM.jpeg"
+                        alt="Photo 9"
+                    />
+                </div>
+                <div class="gallery-item" tabindex="0">
+                  <img
+                      src="./assets/img/gallery/a.jpg"
+                      alt="Photo 9"
+                  />
+              </div>
+
+                <!-- Videos -->
+                <!-- <div class="gallery-item" tabindex="0">
+          <video src="https://www.w3schools.com/html/mov_bbb.mp4" muted></video>
+          <div class="video-overlay">&#9658;</div>
+      </div>
+      <div class="gallery-item" tabindex="0">
+          <video src="https://www.w3schools.com/html/movie.mp4" muted></video>
+          <div class="video-overlay">&#9658;</div>
+      </div> -->
+                <!-- More videos... -->
+            </div>
+
+            <!-- Lightbox -->
+            <!-- <div class="lightbox" id="lightbox">
+                <span class="close">&times;</span>
+                <div class="lightbox-content">
+                    <img src="" alt="" />
+                    <video controls></video>
+                </div>
+            </div> -->
+        </main>
+
+        <footer id="footer" class="footer dark-background">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6 footer-about">
+                            <a
+                                href="index.html"
+                                class="logo d-flex align-items-center"
+                            >
+                                <span class="sitename">Wings of Awareness</span>
+                            </a>
+                            <div class="footer-contact pt-3">
+                                <p>WWF Pakistan</p>
+                                <p>Islamabad, Pakistan</p>
+                                <p class="mt-3">
+                                    <strong>Phone:</strong>
+                                    <span>+92 1234567890</span>
+                                    <span
+                                        style="
+                                            color: #e74c3c;
+                                            font-style: italic;
+                                            font-weight: bold;
+                                        "
+                                        >Coming Soon</span
+                                    >
+                                </p>
+                                <p>
+                                    <strong>Email:</strong>
+                                    <span>info@wingsofawareness.org </span
+                                    ><span
+                                        style="
+                                            color: #e74c3c;
+                                            font-style: italic;
+                                            font-weight: bold;
+                                        "
+                                        >Coming Soon</span
+                                    >
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Our Initiatives</h4>
+                            <ul>
+                                <li><a href="#">Bird Population Surveys</a></li>
+                                <li><a href="#">Habitat Restoration</a></li>
+                                <li><a href="#">Educational Workshops</a></li>
+                                <li><a href="#">Community Engagement</a></li>
+                                <li><a href="#">Research & Advocacy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Get Involved</h4>
+                            <ul>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Donate</a></li>
+                                <li><a href="#">Partner with Us</a></li>
+                                <li><a href="#">Join Our Team</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 footer-links">
+                            <h4>Follow Us</h4>
+                            <ul>
+                                <li><a href="#" target="_blank">Twitter</a></li>
+                                <li>
+                                    <a href="#" target="_blank">Facebook</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.instagram.com/wingsofawareness?igsh=NHk1cHdxMGRoMWdz&utm_source=qr
+                "
+                                        target="_blank"
+                                        >Instagram</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">LinkedIn</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright text-center">
+                <div
+                    class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center"
+                >
+                    <div
+                        class="d-flex flex-column align-items-center align-items-lg-start"
+                    >
+                        <div>
+                            © <strong><span>Wings of Awareness</span></strong>
+                        </div>
+                    </div>
+                    <div
+                        class="social-links order-first order-lg-last mb-3 mb-lg-0"
+                    >
+                        <a href="#" target="_blank"
+                            ><i class="bi bi-twitter"></i
+                        ></a>
+                        <a href="#" target="_blank"
+                            ><i class="bi bi-facebook"></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/wingsofawareness?igsh=NHk1cHdxMGRoMWdz&utm_source=qr
+          "
+                            target="_blank"
+                            ><i class="bi bi-instagram"></i
+                        ></a>
+                        <a href="#" target="_blank"
+                            ><i class="bi bi-linkedin"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll Top -->
+        <a
+            href="#"
+            id="scroll-top"
+            class="scroll-top d-flex align-items-center justify-content-center"
+            ><i class="bi bi-arrow-up-short"></i
+        ></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+        <!-- Main JS File -->
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+        <script>
+            const galleryItems = document.querySelectorAll(".gallery-item");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = lightbox.querySelector("img");
+            const lightboxVideo = lightbox.querySelector("video");
+            const closeBtn = lightbox.querySelector(".close");
+
+            galleryItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    const img = item.querySelector("img");
+                    const video = item.querySelector("video");
+
+                    lightbox.style.display = "flex";
+                    if (img) {
+                        lightboxImg.style.display = "block";
+                        lightboxVideo.style.display = "none";
+                        lightboxImg.src = img.src;
+                    } else if (video) {
+                        lightboxVideo.style.display = "block";
+                        lightboxImg.style.display = "none";
+                        lightboxVideo.src = video.src;
+                        lightboxVideo.play();
+                    }
+                });
+            });
+
+            closeBtn.addEventListener("click", () => {
+                lightbox.style.display = "none";
+                lightboxImg.src = "";
+                lightboxVideo.src = "";
+                lightboxVideo.pause();
+            });
+        </script>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
